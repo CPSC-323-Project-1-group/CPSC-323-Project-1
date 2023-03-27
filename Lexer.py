@@ -9,9 +9,9 @@ def lexer(input_string):
     
     for i, char in enumerate(input_string):
 
-        if tempStr in Keywords:
+        if (tempStr+char) in Keywords:
             #keyword
-            print("keyword: "+tempStr)
+            print("keyword: "+tempStr+char)
             tempStr=""
         elif char in Seperators:
             #seperator
