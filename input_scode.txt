@@ -1,0 +1,1 @@
+while (t < lower) r = 28.00;
