@@ -4,6 +4,7 @@
 
 ```
 Simon Lariz       simonlariz@csu.fullerton.edu
+Eduardo Casas     Eduardo23@csu.fullerton.edu
 ```
 
 Programming Assignment 1
