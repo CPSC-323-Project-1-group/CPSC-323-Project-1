@@ -65,15 +65,23 @@ def open_file(file_name):
         sys.exit()
 
 
+
 def main():
     """Main function"""
     source_code = open_file("input_scode.txt")
-    print(f"{'Token':<10}\tLexeme")
-    position = 0
-    while position < len(source_code):
-        token, lexeme, position = lexer(source_code, position)
-        if token is not None:
-            print(f"{token:<10}\t{lexeme}")
+    
+    original_stdout = sys.stdout
+    with open('output.txt', 'w') as f:
+        sys.stdout = f
+        print(f"{'Token':<10}\tLexeme")
+        position = 0
+        while position < len(source_code):
+            token, lexeme, position = lexer(source_code, position)
+            if token is not None:
+                print(f"{token:<10}\t{lexeme}")
+        sys.stdout = original_stdout
+            
+    
 
 
 if __name__ == "__main__":
